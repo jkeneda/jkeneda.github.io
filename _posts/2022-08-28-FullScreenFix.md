@@ -7,27 +7,29 @@ categories: TexanConnect
 
 Do you sometimes get fullscreen pop-ups with student info when hovering over student names in TexanConnect rosters?  Yeah, me too.  (It happens by default when the screen width is small.)  Here's a way to disable that.
 
-In Firefox or Chrome, install either the Tampermonkey or Greasemonkey extension.  This lets you add your own code to specific websites.
+1\. In Firefox or Chrome, install the Tampermonkey extension ([Firefox link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), [Chrome link](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo)).  This lets you add your own code to specific websites.
 
-In TamperMonkey or GreaseMonkey, copy and paste the following code:
+2\. Click the button below to copy this code:
 
-{% highlight javascript %}
+{% include codeHeader.html %}
+```javascript
 // ==UserScript==
 // @name         Disable profileFullScreen
-// @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Stops the student information card from being a fullscreen pop up.
-// @author       jkeneda
+// @author       Josh Keneda
 // @match        https://elluciansso.southplainscollege.edu/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=southplainscollege.edu
 // @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    GM_addStyle('@media only screen and (max-width:62rem) {.profileFullScreen { display: none!important; }}');
+    GM_addStyle('@media only screen and (max-width:62rem)
+    {.profileFullScreen { display: none!important; }}');
 })();
-{% endhighlight %}
+```
 
-With that script enabled, you shouldn't get any more fullscreen pop-ups when you hover over a student's name.
+3\. Find the options page (called the Tampermonkey Dashboard) for the Tampermonkey add-on/extension.  Once you're there, click the `+` button near the top right (next to the Installed Userscripts tab) to add your own new script.  Paste the code you copied above over their sample code.
+
+4\. You can hit `Ctrl + s` to save your new script.  And you're done!  With that script enabled, you shouldn't get any more fullscreen pop-ups when you hover over a student's name.

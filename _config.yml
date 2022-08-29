@@ -21,7 +21,7 @@
 title: jkeneda - mathy miscellany
 email: jkeneda@southplainscollege.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my hiding place for little tidbits or blog posts.  Go to [drmath.biz](https://www.drmath.biz) if you're looking for the Business Math notes.
+  Welcome to my hiding place for little tidbits or blog posts.  Go to drmath.biz instead if you're looking for my Business Math notes.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: JoshuaKeneda
