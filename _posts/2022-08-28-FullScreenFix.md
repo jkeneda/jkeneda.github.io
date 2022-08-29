@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Disable the profileFullScreen issue on TexanConnect"
+title:  "Disable profileFullScreen on TexanConnect"
 date:   2022-08-28 18:39:18 -0500
-categories: TexanConnect
+categories: TexanConnect SPC
 ---
 
-Do you sometimes get fullscreen pop-ups with student info when hovering over student names in TexanConnect rosters?  Yeah, me too.  (It happens by default when the screen width is small.)  Here's a way to disable that.
+Do you sometimes get fullscreen pop-ups with student info when hovering over student names in TexanConnect rosters?  Yeah, me too.  (It happens by default when the window width is relatively small.)  Here's a way to disable the fullscreen pop-up.
 
-1\. In Firefox or Chrome, install the Tampermonkey extension ([Firefox link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), [Chrome link](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo)).  This lets you add your own code to specific websites.
+1\. In Firefox or Chrome, install the Tampermonkey extension ([Firefox link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), [Chrome link](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo)).  This extension lets you add your own code to specific websites.
 
 2\. Click the button below to copy this code:
 
@@ -30,6 +30,12 @@ Do you sometimes get fullscreen pop-ups with student info when hovering over stu
 })();
 ```
 
-3\. Find the options page (called the Tampermonkey Dashboard) for the Tampermonkey add-on/extension.  Once you're there, click the `+` button near the top right (next to the Installed Userscripts tab) to add your own new script.  Paste the code you copied above over their sample code.
+3\. Navigate to the options page for the Tampermonkey add-on/extension.  In Firefox, you can go to `☰ > Add-ons and Themes > Tampermonkey ⋯ > Options`.  In Chrome, you go to `⋮ > More Tools > Extensions > Tampermonkey Details > Extension Options`.
 
-4\. You can hit `Ctrl + s` to save your new script.  And you're done!  With that script enabled, you shouldn't get any more fullscreen pop-ups when you hover over a student's name.
+4\. Once you're there, click the `+` button near the top right (next to the Installed Userscripts tab) to add your own new script.  Paste the code you copied above over their sample code.
+
+5\. You can hit `Ctrl + s` to save your new script.  And you're done!
+
+With that script enabled, you shouldn't get any more fullscreen pop-ups when you hover over a student's name.
+
+<script src="/assets/scripts/copyCode.js"></script>
