@@ -45,7 +45,7 @@ From the Tampermonkey settings page, click the far left `+` button tab (next to 
 Paste the code you copied above over their sample code and then hit `Ctrl + s` to save your new script.  You're done!
 
 ---
-
+<br />
 With that script enabled, you shouldn't get any more fullscreen pop-ups when you hover over a student's name.  You will still get the smaller, less invasive student profile pop-ups whenever your window size is large enough.
 
 If this script ever causes any issues for you, feel free to send me an email (jkeneda) or just disable/remove the Tampermonkey extension.
