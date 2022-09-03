@@ -31,8 +31,7 @@ Click the button below to copy this code:
 (function() {
     'use strict';
 
-    GM_addStyle('@media only screen and (max-width:75rem)
-    {.profileFullScreen { display: none!important; }}');
+    GM_addStyle('@media only screen and (max-width:75rem) {.profileFullScreen { display: none!important; }}');
 })();
 ```
 
