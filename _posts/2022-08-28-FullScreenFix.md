@@ -5,11 +5,11 @@ date:   2022-08-28 18:39:18 -0500
 categories: TexanConnect SPC
 ---
 
-Do you sometimes get fullscreen pop-ups with student info when hovering over student names in TexanConnect rosters?  Yeah, me too.  (It happens by default when the window width is relatively small.)  Here's a way to disable the fullscreen pop-up.
+Hey SPC folks.  Do you sometimes get fullscreen pop-ups with student info when hovering over student names in TexanConnect rosters or search results?  Yeah, me too.  (It happens by default when your window width is relatively small.)  Here's a way to disable the fullscreen pop-up.
 
 ---
 
-### Stoppin the Fullscreen Poppin:
+### Stoppin' the Fullscreen Poppin':
 #### Step 1
 In Firefox or Chrome, install the Tampermonkey extension ([Firefox link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), [Chrome link](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo)).  This extension lets you add your own code to specific websites.
 
@@ -31,7 +31,7 @@ Click the button below to copy this code:
 (function() {
     'use strict';
 
-    GM_addStyle('@media only screen and (max-width:62rem)
+    GM_addStyle('@media only screen and (max-width:75rem)
     {.profileFullScreen { display: none!important; }}');
 })();
 ```
@@ -48,5 +48,7 @@ Paste the code you copied above over their sample code and then hit `Ctrl + s` t
 ---
 
 With that script enabled, you shouldn't get any more fullscreen pop-ups when you hover over a student's name.  You will still get the smaller, less invasive student profile pop-ups whenever your window size is large enough.
+
+If this script ever causes any issues for you, feel free to send me an email (jkeneda) or just disable/remove the Tampermonkey extension.
 
 <script src="/assets/scripts/copyCode.js"></script>
