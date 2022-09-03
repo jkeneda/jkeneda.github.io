@@ -24,6 +24,7 @@ Click the button below to copy this code:
 // @description  Stops the student information card from being a fullscreen pop up.
 // @author       Josh Keneda
 // @match        https://elluciansso.southplainscollege.edu/*
+// @match        https://ellucianss1.southplainscollege.edu/*
 // @grant        GM_addStyle
 // ==/UserScript==
 
