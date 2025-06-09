@@ -26,20 +26,8 @@ $("#fx").change(function(){
 $("#directionOptions").change(function(){
     $("#undirected,#directed,#effect1,#effect2,#color").hide();
     if ($(this).val() == "undirected") {
-        $("#undirected").show();
-    } else if($(this).val() == "directed") {
-        $("#directed").show(); 
-    }
-});
-$("#undirectedOptions").change(function(){
-    $("#effect1").hide();
-    if ($(this).val()) {
         $("#effect1").show();
-    }
-});
-$("#directedOptions").change(function(){
-    $("#effect2").hide();
-    if ($(this).val()) {
+    } else if ($(this).val() == "directed") {
         $("#effect2").show();
     }
 });
@@ -85,6 +73,7 @@ function ATKandFX () {
         return "";
     }
 }
+
 function getFX () {
     if ((!$("#directionOptions").val()) || (!$("#colorChoice").val())) {
         return "";
@@ -92,17 +81,11 @@ function getFX () {
         let effect = document.getElementById('undy-effect').value;
         let color = document.getElementById('colorChoice').value;
         let target = '@{target|Where?|token_id}';
-            if ($("#undirectedOptions").val() == "selected") {
-                target = ''
-            }
         return `/fx ${effect}-${color} ${target}`;
     } else if ($("#directionOptions").val() == "directed") {
         let effect = document.getElementById('dir-effect').value;
         let color = document.getElementById('colorChoice').value;
         let source = '@{target|Source?|token_id}';
-            if ($("#directedOptions").val() == "selected") {
-                source = '@{selected|token_id}';
-            }
         let target = '@{target|Target?|token_id}';
         return `/fx ${effect}-${color} ${source} ${target}`;
     }
